@@ -1,0 +1,18 @@
+
+type User {
+    username: String,
+    age: Int
+}
+
+type Query {
+    getUser(id: Int!):User,
+    getUsers(limit: Int = 10) : [User]
+}
+
+type Mutation {
+    createUser(username: String , age: Int):User
+}
+
+type Subscription {
+    getUser(id: Int):User,
+}
